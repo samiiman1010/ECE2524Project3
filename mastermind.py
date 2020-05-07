@@ -5,7 +5,7 @@ print("Hello, and welcome to my interpretation of a traditional Mastermind\ngame
 response = input("y/n?\n");
 
 if response == "y":
-    print("Okay, so there are 8 different colors in the game: red, orange, yellow,\ngreen, blue, violet, black, and brown.  When you start the game, I will\nrandomly select a sequence of 5 colors, and some of these colors might be the same.\nYour job is to give me an initial guess on the colors I picked.\nI'll ask you for your guesses in order, because I have the colors you're guessing\norganized in a particular order that you have to match.  After you almost\ncertainly get it incorrect the first time, I'll let you know how you did; if\nyou get a correct color in a correct location, I'll let you know you'll\nguess again with a new sequence.  This process repeats until either you get it\nright or I get bored (so many 10 tries or so).  Good luck!\n\n")
+    print("Okay, so there are 8 different colors in the game: red, orange, yellow,\ngreen, blue, violet, black, and brown.  When you start the game, I will\nrandomly select a sequence of 5 colors, and some of these colors might be the same.\nYour job is to give me an initial guess on the colors I picked.\nI'll ask you for your guesses in order, because I have the colors you're guessing\norganized in a particular order that you have to match.  After you almost\ncertainly get it incorrect the first time, I'll let you know how you did; if\nyou get a correct color in a correct location, I'll let you know you'll\nguess again with a new sequence.  This process repeats until either you get it\nright or I get bored (so maybe 6 tries or so).  Good luck!\n\n")
 elif response == "n":
     print("Excellent, you must be a Mastermind veteran\n\n")
 else:
@@ -22,7 +22,7 @@ for x in range(0,5):
 
 i = 0
 win = 0
-while i < 10 and win == 0:
+while i < 6 and win == 0:
     shock1 = 0
     shock2 = 0
     shock3 = 0
@@ -55,8 +55,13 @@ while i < 10 and win == 0:
         print("You got the fifth one right!")
         shock5 = 1
 
-    if guess1 == 1 and guess2 == 1 and guess3 == 1 and guess4 == 1 and guess5 == 1:
+    if shock1 == 1 and shock2 == 1 and shock3 == 1 and shock4 == 1 and shock5 == 1:
         print("You got them all! You win!")
         win = 1
 
     i = i + 1
+
+
+
+if win == 0:
+    print("Oof, better luck next game. \n\n")
