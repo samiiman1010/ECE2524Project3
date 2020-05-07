@@ -22,14 +22,39 @@ for x in range(0,5):
 
 i = 0
 
-while i < 10:
+while i < 10 && win == 0:
     shock1 = 0
     shock2 = 0
     shock3 = 0
     shock4 = 0
     shock5 = 0
+    win = 0
     guess1 = input("Guess the first color: ")
     guess2 = input("Guess the second color: ")
     guess3 = input("Guess the third color: ")
     guess4 = input("Guess the fourth color: ")
     guess5 = input("Guess the fifth color: ")
+
+    if guess1 == thisGame[0]:
+        print("You got the first one right!")
+        shock1 = 1
+
+    if guess2 == thisGame[1]:
+        print("You got the second one right!")
+        shock2 = 1
+
+    if guess3 == thisGame[2]:
+        print("You got the third one right!")
+        shock3 = 1
+
+    if guess4 == thisGame[3]:
+        print("You got the fourth one right!")
+        shock4 = 1
+
+    if guess5 == thisGame[4]:
+        print("You got the fifth one right!")
+        shock5 = 1
+
+    if guess1 == guess2 == guess3 == guess4 == guess5 == 1:
+        print("You got them all! You win!")
+        win = 1
