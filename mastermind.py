@@ -10,3 +10,26 @@ elif response == "n":
     print("Excellent, you must be a Mastermind veteran\n\n")
 else:
     print("Ha, gottem, I did write a handler, and you're not allowed to do that.\nSince you didn't follow the rules, I'll just assume you know what you're doing and we'll\ncontinue.\n\n")
+
+import random
+
+colorList = ["red", "orange", "yellow", "green", "blue", "violet", "black", "brown"]
+
+thisGame = ["color"] * 5
+
+for x in range(0,5):
+    thisGame[x] = random.choice(colorList)
+
+i = 0
+
+while i < 10:
+    shock1 = 0
+    shock2 = 0
+    shock3 = 0
+    shock4 = 0
+    shock5 = 0
+    guess1 = input("Guess the first color: ")
+    guess2 = input("Guess the second color: ")
+    guess3 = input("Guess the third color: ")
+    guess4 = input("Guess the fourth color: ")
+    guess5 = input("Guess the fifth color: ")
